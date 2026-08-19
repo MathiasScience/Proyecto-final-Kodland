@@ -13,9 +13,8 @@ app.add_middleware(
 )
 
 
-@app.get("/")
-def inicio():
-    fecha_evento = datetime(1986, 4, 26, 1, 23, 40)
+def calcular_tiempo(anio, mes, dia, hora, minuto, segundo):
+    fecha_evento = datetime(anio, mes, dia, hora, minuto, segundo)
     ahora = datetime.now()
     diferencia = ahora - fecha_evento
     total_seg = int(diferencia.total_seconds())
@@ -29,4 +28,10 @@ def inicio():
     segundos = resto % 60
     texto_formateado = f"""{anios} años, {dias} días, {horas}h {minutos}m
     {segundos}s"""
-    return {"mensaje": texto_formateado}
+    return texto_formateado
+
+
+@app.get("/")
+def inicio():
+    tiempo_revolucion_industrial = calcular_tiempo(1760, 1, 1, 0, 0, 0)
+    return {"mensaje": tiempo_revolucion_industrial}
