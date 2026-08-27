@@ -1,9 +1,24 @@
-function actualizarContador() {
-    fetch("http://127.0.0.1:8000")
-        .then(respuesta => respuesta.json())
-        .then(datos => {
-            document.getElementById("revolucion-industrial").innerText = datos.mensaje + " segundos";
-        });
+async function obtenerContador(endpoint, idElemento) {
+    try {
+        const respuesta = await fetch(`http://127.0.0.1:8000/${endpoint}`);
+        const datos = await respuesta.json();
+        
+        document.getElementById(idElemento).textContent = datos.mensaje;
+    } catch (error) {
+        console.error(`Error al cargar ${endpoint}:`, error);
+    }
 }
 
-setInterval(actualizarContador, 1000);
+setInterval(() => {
+    obtenerContador("", "revolucion-industrial")
+    obtenerContador("calculo-de-duplicacion", "calculo")
+    obtenerContador("curva-keeling", "curva")
+    obtenerContador("evento", "conferencia")
+    obtenerContador("fundacion_IPCC", "fundacion")
+    obtenerContador("nacimiento_convencion", "convencion")
+    obtenerContador("firma-kioto", "protocolo")
+    obtenerContador("acuerdo-paris", "acuerdo")
+    obtenerContador("energia-renovable", "desplomo")
+    obtenerContador("precio-bajo", "precio")
+    obtenerContador("muralla", "verde")
+}, 1000);
