@@ -75,14 +75,15 @@ a{
     list-style: none;
     padding: 15px 45px;
     margin: 0;
-    background-color: #39b643;
+    background-color: #00638a;
 
 }
 
 #nav-bar>li>a{
-    font-size: 25px;
+    font-size: 22px;
     flex-shrink: 0;
     text-decoration: none;
+    color: #ffffff;
 }
 
 main{
@@ -92,7 +93,7 @@ main{
 }
 
 a{
-    color: #ffffff;
+    color: #000077;
     font-family: Helvetica;
 }
 
@@ -130,4 +131,36 @@ a{
     width: 400px;
     height: 200px;
     left: 900px;
+    top: -250px;
+}
+
+#subida-tres{
+    position: relative;
+    top: -225px;
+}
+
+#logo-onu{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    left: 1000px;
+    top: -150px;
+}
+
+#subida-cuatro{
+    position: relative;
+    top: -225px;
+}
+
+#muralla-verde{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    left: 912px;
+    top: -250px;
+}
+
+#subida-cinco{
+    position: relative;
+    top: -225px;
 }
