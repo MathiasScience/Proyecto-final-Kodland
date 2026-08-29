@@ -1,11 +1,133 @@
 body{
     background-color: #c0edff;
+    animation: aparecer 0.75s ease-out forwards;
+    margin: 0;
+    padding: 0;
 }
 
-h1{
-    font-family: 'Bebas Neue';
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+}
+
+h1, h2{
+    font-family: Arial;
+    font-size: 50px;
+}
+
+h2{
+    font-size: 35px;
 }
 
 #subtitulo{
-    height: 50px;
+    font-size: 35px;
+}
+
+#imagen-fabrica{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: 15px;
+    left: 900px;
+}
+
+#curva-keeling{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    top: -175px;
+    left: 900px;
+}
+p{
+    position: relative;
+    top: -250px;
+    font-size: 30px;
+    font-family: Helvetica;
+}
+
+#subida{
+    position: relative;
+    top: -225px;
+}
+
+#widget-climatico{
+    position: relative;
+    top: -250px;
+}
+
+a{
+    font-size: 30px;
+}
+
+#subida-dos{
+    position: relative;
+    top: -225px;
+}
+
+#nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 15px 45px;
+    margin: 0;
+    background-color: #39b643;
+
+}
+
+#nav-bar>li>a{
+    font-size: 25px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+main{
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+}
+
+a{
+    color: #ffffff;
+    font-family: Helvetica;
+}
+
+@media (max-width: 768px) {
+    body, main, section, div {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        height: auto !important;
+        min-height: auto !important;
+        position: static !important;
+    }
+
+    h1, h2, h3, p, span, img, a, button {
+        position: static !important;
+        transform: none !important;
+        margin: 15px 0 !important;
+        text-align: center !important;
+        width: 90% !important;
+        left: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+    }
+
+    img {
+        height: auto !important;
+        max-width: 100% !important;
+    }
+}
+
+#grafico{
+    position: relative;
+    width: 400px;
+    height: 200px;
+    left: 900px;
 }
