@@ -1,6 +1,6 @@
 async function obtenerContador(endpoint, idElemento) {
     try {
-        const respuesta = await fetch(`http://127.0.0.1:8000/${endpoint}`);
+        const respuesta = await fetch(`https://proyecto-final-kodland.onrender.com/${endpoint}`);
         const datos = await respuesta.json();
         
         document.getElementById(idElemento).textContent = datos.mensaje;
