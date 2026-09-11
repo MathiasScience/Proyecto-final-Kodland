@@ -93,5 +93,5 @@ def bateria_precio():
 
 @app.get("/muralla")
 def muralla_verde():
-    tiempo_muralla = calcular_tiempo(2016, 1, 1, 0, 0, 0)
+    tiempo_muralla = calcular_tiempo(2007, 1, 29, 0, 0, 0)
     return {"mensaje": tiempo_muralla}
